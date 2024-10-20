@@ -17,7 +17,7 @@ The Many-Time Pad (MTP) is a cryptographic method that, while theoretically secu
  - -od-rn cryptogra--- -equ--es c---ful a-- -ig-r-u- a-a-----
 - -dd-ess randomiz---o- co--d pr---nt ma--c-ou- -a-l -t-----
 - -t -s not practi--- -o r--y so---y on --m-et-i- -nc-y-----
-- - s-all never re--- -he --me p---word -- -ul-i-l- a-c-----
+- -  s-all never re--- -he --me p---word -- -ul-i-l- a-c-----
 - -ee- review of s---r-ty --chan---s red--e- v-l-e-ab-l-----
 - -ea-ning how to ---t- se--re s---ware -- - n-c-s-ar- -----
 - -ec-re key excha--- -s n--ded --- symm--r-c -e- -nc-y-----
@@ -28,7 +28,7 @@ these are my guesses for the text
 - "Modern cryptography requires careful and rigorous analysis."
 - "Address randomization could prevent malicious data attacks."
 - "It is not practical to rely solely on symmetric encryption."
-- "A user shall never reuse the same password for multiple accounts."
+- "shall never reuse the same password for multiple accounts."
 - "Deep review of security mechanisms reduces vulnerabilities."
 - "Learning how to write secure software is a necessary process."
 - "Secure key exchange is needed for symmetric key encryption."
