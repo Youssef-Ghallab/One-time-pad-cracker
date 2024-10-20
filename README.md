@@ -33,3 +33,7 @@ these are my guesses for the text
 - "Learning how to write secure software is a necessary process."
 - "Secure key exchange is needed for symmetric key encryption."
 - "Security at the expense of usability could damage success."
+
+ ## Limitations:
+
+ - This approach assumes that the plaintext only has letters and spaces, no numbers or special characters are used
