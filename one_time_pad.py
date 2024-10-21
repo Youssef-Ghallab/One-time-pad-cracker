@@ -23,7 +23,6 @@ def dehex(hex_string):
         bytes_data.append(int(hex_string[i:i+2], 16))
     return bytes_data
 
-
 ciphertexts_hex = [
 "F9B4228898864FCB32D83F3DFD7589F109E33988FA8C7A9E9170FB923065F52DD648AA2B8359E1D122122738A8B9998BE278B2BD7CF3313C7609",
 "F5BF229F8F9B1C8832C0212DFD7F92EA18FF29C7E6C968848D6EFAC16074F129D640AB67CE59E3DC6109212AB4EB959FFD34F3B269EB292C7409",
@@ -35,8 +34,38 @@ ciphertexts_hex = [
 "E7BE259898811BD160C03B69E67A9EB01CF330CDE69A6ECB9764BE946367F636DF47AB3E835BE0C06E046E3BA6A69799F478A0B67EEA3A266B03" ]
 
 ciphertexts = [dehex(hex_str) for hex_str in ciphertexts_hex]
-
 cleartext = decypher(ciphertexts)
-
 for line in cleartext:
     print("".join(line))
+
+def get_key_from_cipher_and_plaintext(cipher_hex, plaintext):
+    
+    cipher_bytes = dehex(cipher_hex)
+    key = ""
+    
+    for i in range(len(plaintext)):
+        key_byte = cipher_bytes[i] ^ ord(plaintext[i])
+        key = key + f'{key_byte:02x}'
+    
+    return key
+
+def get_message_from_cipher_and_key(cipher_hex, key_hex):
+    
+    cipher_bytes = dehex(cipher_hex)
+    key_bytes = dehex(key_hex)
+    message = ""
+
+    for i in range(len(cipher_bytes)):
+        message_byte = chr((cipher_bytes[i] ^ key_bytes[i]))
+        message = message + message_byte
+    return message
+
+
+cipher_hex_example = "F9B4228898864FCB32D83F3DFD7589F109E33988FA8C7A9E9170FB923065F52DD648AA2B8359E1D122122738A8B9998BE278B2BD7CF3313C7609"
+plaintext_example = "Modern cryptography requires careful and rigorous analysis"
+
+key = get_key_from_cipher_and_plaintext(cipher_hex_example, plaintext_example)
+
+for m in ciphertexts_hex:
+    message = get_message_from_cipher_and_key(m, key)
+    print(message)
