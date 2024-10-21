@@ -28,7 +28,7 @@ these are my guesses for the text
 - "Modern cryptography requires careful and rigorous analysis."
 - "Address randomization could prevent malicious data attacks."
 - "It is not practical to rely solely on symmetric encryption."
-- "shall never reuse the same password for multiple accounts."
+- "I shall never reuse the same password for multiple accounts."
 - "Deep review of security mechanisms reduces vulnerabilities."
 - "Learning how to write secure software is a necessary process."
 - "Secure key exchange is needed for symmetric key encryption."
