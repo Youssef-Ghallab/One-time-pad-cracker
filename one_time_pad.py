@@ -32,7 +32,7 @@ def is_space(lines: list[list[int]], current: list[int], i: int) -> bool:
     for line in lines:
         result = line[i] ^ current[i]
         # Check if the result is a letter or both are spaces (result is 0)
-        if not (chr(result).isalpha() or result != 0):
+        if not (chr(result).isalpha() or result == 0):
             return False
     return True
 
